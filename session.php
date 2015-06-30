@@ -1,6 +1,6 @@
 <?php
 // Connect with server
-$connection = mysql_connect("localhost", "root", "");
+$connection = mysql_connect("127.0.0.1", "root", "toor");
 // Selecting Database
 $db = mysql_select_db("k1p11", $connection);
 session_start();// Starting Session

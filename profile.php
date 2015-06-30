@@ -31,7 +31,7 @@ include('session.php');
     <div class="row">
 	
 <?php
-	$connection=mysqli_connect("localhost","root","","k1p11") or die("not connected");
+	$connection=mysqli_connect("127.0.0.1","root","toor","k1p11") or die("not connected");
 
 	$result = mysqli_query($connection, "SELECT * from `content` where `id` = 1");
 	$text = mysqli_fetch_array($result);

@@ -1,5 +1,7 @@
 <?php
 include('login.php');
+
+require( "switch.php" );
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,6 +54,7 @@ HTML;
 </div>
 
 <div class="container">
+	<?= $page ?>
 </div>
 </body>
 </html>

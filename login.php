@@ -10,7 +10,7 @@ else
 // Define $username and $password
 $username=$_POST['username'];
 $password=md5($_POST['password']);
-$connection = mysql_connect("localhost", "root", "");
+$connection = mysql_connect("127.0.0.1", "root", "toor");
 // Protect from Injections
 $username = stripslashes($username);
 $password = stripslashes($password);
