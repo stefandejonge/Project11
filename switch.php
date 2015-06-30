@@ -93,8 +93,6 @@ HTML;
 else
 {
 	$page = <<<HTML
-	<div id="questions">
-
-	</div>
+	<h2>Slaat het u het ontbijt wel eens over</h2>
 HTML;
 }
