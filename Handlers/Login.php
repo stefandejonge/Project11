@@ -57,6 +57,7 @@ class Login
 				if( password_verify( $password, $databaseResultSet["password"] ))
 				{
 					// User is authenticated.
+					$_SESSION["auth"] = $databaseResultSet;
 					return true;
 				}
 				$this->feedback = self::FB_USER_PASSWORD_MISS_MATCH;
