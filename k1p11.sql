@@ -1,42 +1,10 @@
-CREATE TABLE Answers
-(
-  id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  question1 TINYINT,
-  question2 TINYINT,
-  question3 TINYINT,
-  question4 TINYINT,
-  question5 TINYINT,
-  question6 TINYINT,
-  question7 TINYINT,
-  question8 TINYINT,
-  question9 TINYINT,
-  question10 TINYINT
-
+CREATE TABLE `fix_question`(
+  `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(50),
+  `question` TEXT
 );
-CREATE TABLE Questions
-(
-  id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  name VARCHAR(255),
-  description VARCHAR(255)
+CREATE TABLE `fix_answer`(
+  `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  `user_id` INT UNSIGNED,
+  `answer` TEXT
 );
-CREATE TABLE content
-(
-  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  page VARCHAR(255),
-  description LONGTEXT
-);
-CREATE TABLE results
-(
-  id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  user_id INT UNSIGNED,
-  question_id INT UNSIGNED,
-  answer_id INT UNSIGNED
-);
-CREATE TABLE users
-(
-  id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  name VARCHAR(255),
-  password VARCHAR(60),
-  level TINYINT UNSIGNED DEFAULT 1
-);
-CREATE UNIQUE INDEX name ON users (name);
