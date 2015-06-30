@@ -6,12 +6,38 @@ require( "switch.php" );
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link href="Css/bootstrap.min.css" rel="stylesheet"/>
 	<script type="application/javascript" src="Javascript/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<link href="questions.css" rel="stylesheet"/>
+	<script>
+		answer = [];
+		function getAnswer( $number )
+		{
+			answer[ $number ] = $('input[name=radioName]:checked', '#question-form').val();
+		}
+
+	</script>
+	<style>
+		body{
+			background: repeat url("Image/img.png");
+		}
+	#questions{
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		-ms-border-radius: 15px;
+		-o-border-radius: 15px;
+		border-radius: 15px;
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+		-moz-box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+		box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+		height: auto;
+		background: white;
+		padding: 20px;
+	}
+	</style>
 </head>
 <body>
 	<div id="navigation">
